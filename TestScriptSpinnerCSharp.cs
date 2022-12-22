@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spinner : ScriptableObj
+public class TestScriptSpinnerCSharp : ScriptableObj
 {
+   // THIS IS A TEST TO MODIFY
     float speed = 0.1f;
     private void Update()
     {
