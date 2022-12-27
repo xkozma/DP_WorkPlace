@@ -7,6 +7,7 @@ public class MyCustomModifiedScript : MonoBehaviour {
 void Start ()
 {
        Debug.Log("Hello world!");
+       Debug.Log("MODIFICATION");
 }
 	
 	// Update is called once per frame
