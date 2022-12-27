@@ -1,16 +1,17 @@
-
-using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
 public class MyCustomModifiedScript : MonoBehaviour {
     // I MODIFIED THIS SCRIPT AS A TEST
 
-	// Use this for initializationvoid Start () {
-	
+	// Use this for initialization
+void Start () {
+	    Debug.Log("Hello world!");
 	}
 	
-	// Update is called once per framevoid Update () {
+	// Update is called once per frame
+void Update () {
 	
 	}
 }
