@@ -6,7 +6,7 @@ public class Rocket : ScriptableObj
 {
     public float forceToApply;
     public string RocketName = "Rocket";
-    public int numInt;
+    public int numInt = 5;
     public bool isRocket = true;
     private ScriptableRigidBody MyRigidBody;
     // Start is called before the first frame update
