@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Rocket : ScriptableObj
 {
-    public float forceToApply = 69f;
+    public float forceToApply;
     public string RocketName = "Rocket";
-    public int numInt = 5;
+    public int numInt;
     public bool isRocket = true;
     private ScriptableRigidBody MyRigidBody;
     // Start is called before the first frame update
