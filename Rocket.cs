@@ -12,7 +12,7 @@ public class Rocket : ScriptableObj
     
     // Start is called before the first frame update
     void Start()
-    {  FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
+    { FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
         GetComponent<ScriptableObjDefaults>().Load();
         MyRigidBody = GetComponent<ScriptableRigidBody>();
         MyRigidBody.SetForce(Vector3.up * forceToApply);
@@ -22,7 +22,7 @@ public class Rocket : ScriptableObj
     {
         if (Button(input,"space"))
         {
-            MyRigidBody.SetForce(Vector3.up * forceToApply); 
+            MyRigidBody.SetForce(Vector3.up * forceToApply);
         }
     }
 
