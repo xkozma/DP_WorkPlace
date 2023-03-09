@@ -13,7 +13,8 @@ public class LightsScript : ScriptableObj
     {
         FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
         Mat = GetComponent<Renderer>().material;
-        Blinker = Vector3.zero;
+        Blinker = Vector3.one;
+        Mat.SetColor("_Color",Vector4.one);
     }
 
     private void DoAction(string input)
@@ -31,10 +32,8 @@ public class LightsScript : ScriptableObj
 
     private void Update()
     {
-        float intensity = Mathf.Sin(Time.time)*2;
+        float intensity = Mathf.Sin(Time.time);
         Blinker = new Vector4(intensity, intensity, intensity);
         Mat.SetColor(EmissionColor, Blinker);
-        
-        
     }
 }
