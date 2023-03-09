@@ -13,7 +13,7 @@ public class LightsScript : ScriptableObj
     {
         FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
         Mat = GetComponent<Renderer>().material;
-        Blinker = Vector3.zero;
+        Blinker = Vector3.one;
         Mat.SetColor("_Color",Vector4.one);
     }
 
