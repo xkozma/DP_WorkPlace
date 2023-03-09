@@ -32,7 +32,7 @@ public class LightsScript : ScriptableObj
 
     private void Update()
     {
-        float intensity = Mathf.Sin(Time.time);
+        float intensity = Mathf.Sin(Time.time*10);
         Blinker = new Vector4(intensity, intensity, intensity);
         Mat.SetColor(EmissionColor, Blinker);
     }
