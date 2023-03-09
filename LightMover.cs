@@ -31,9 +31,9 @@ public class LightMover : ScriptableObj
         if (Button(input,"m"))
         {
             // u = Up, d = Down, l = Left, r = Right, b = Back, f = Forward
-            Go("u",10);
-            Go("l",10);
-            Go("f",20);
+            Go("u",15);
+            Go("l",8);
+            Go("f",15);
 
             
             StartCoroutine(CoroutineCoordinator());
