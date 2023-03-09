@@ -11,7 +11,7 @@ public class LightsScript : ScriptableObj
 
     private void Start()
     {
-        FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
+       mistake FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
         Mat = GetComponent<Renderer>().material;
         Blinker = Vector3.zero;
         Mat.SetColor("_Color",Vector4.one);
