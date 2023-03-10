@@ -20,10 +20,10 @@ public class LightControl : ScriptableObj
             LightsScript.Mat.SetColor("_Color",Vector4.zero);
         }
 
-if (Button(input,"l"))
+ if (Button(input,"l"))
         {
             Debug.Log("Light is on");
-            LightsScript.isOn = true;
+            LightsScript.isOn =true;
             LightsScript.Mat.SetColor("_Color",Vector4.one);
         }
     }
