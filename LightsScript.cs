@@ -5,35 +5,29 @@ using UnityEngine;
 
 public class LightsScript : ScriptableObj
 {
-    private Material Mat;
+    public Material Mat;
     private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
     private Vector4 Blinker;
+    
+    //Added
+    public bool isOn;
 
     private void Start()
     {
-        FindObjectOfType<KeyboardInteraction>().ButtonDown.AddListener(DoAction);
         Mat = GetComponent<Renderer>().material;
         Blinker = Vector3.one;
         Mat.SetColor("_Color",Vector4.one);
+        isOn = true;
     }
-
-    private void DoAction(string input)
-    {
-        if (Button(input,"l"))
-        {
-            Debug.Log("Light is on");
-        }
-        
-        if (Button(input,"p"))
-        {
-            Debug.Log("Light is off");
-        }
-    }
+    
 
     private void Update()
     {
-        float intensity = Mathf.Sin(Time.time*10);
+        float intensity = Mathf.Sin(99999*Time.time);
         Blinker = new Vector4(intensity, intensity, intensity);
-        Mat.SetColor(EmissionColor, Blinker);
+        if(isOn)
+            Mat.SetColor(EmissionColor, Blinker);
+        else
+            Mat.SetColor(EmissionColor, Vector4.zero);
     }
 }
