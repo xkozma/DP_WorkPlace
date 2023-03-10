@@ -23,11 +23,11 @@ public class LightsScript : ScriptableObj
 
     private void Update()
     {
-        float intensity = Mathf.Sin(99999*Time.deltaTime);
+        float intensity = Mathf.Sin(Time.Time);
         Blinker = new Vector4(intensity, intensity, intensity);
         if(isOn)
             Mat.SetColor(EmissionColor, Blinker);
         else
             Mat.SetColor(EmissionColor, Vector4.zero);
-    }
+   }
 }
