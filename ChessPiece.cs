@@ -13,6 +13,6 @@ public class ChessPiece : ScriptableObj
     // Update is called once per frame
     void Update()
     {
-       transform.rotation = Quaternion.Identity; 
+       transform.rotation = new Quaternion(0,0,0,0); 
     }
 }
