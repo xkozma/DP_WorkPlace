@@ -22,7 +22,7 @@ public class ChessBoardAnchors : ScriptableObj
     {
         if (other.tag == "ChessPiece")
         {
-            Debug.Log("Exited " + other.name);
+            //Debug.Log("Exited " + other.name);
         }
     }
 }
