@@ -108,7 +108,6 @@ using UnityEngine.UI;
         private void UpdateTimerColor()
         {
             float time = (float)clockTime.TotalSeconds / clockMaxSeconds;
-            Debug.Log(time);
             Color currentColor = timerSettings.colors.Evaluate(time);
             timerBackground.color = currentColor;
         }
