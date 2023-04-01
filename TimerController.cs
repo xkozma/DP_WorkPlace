@@ -11,7 +11,7 @@ using UnityEngine.UI;
     public class TimerController : ScriptableObj
     {
         public Image timerBackground;
-        public TimerSettings timerSettings;
+        public TimerSettings timerSettings
         public PlayerPiece pieceColor;
 
         private int extraSeconds;
