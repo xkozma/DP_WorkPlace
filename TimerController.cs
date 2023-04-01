@@ -20,12 +20,20 @@ using UnityEngine.UI;
         private TimeSpan clockTime;
         public TextMeshProUGUI timerText;
 
+        /*public TimerController()
+        {
+            ClockEvents.ConfigureClockEvent.AddListener(SetTimer);
+            ClockEvents.ChangePlayerEvent.AddListener(HandleClockTime);
+            ClockEvents.PauseClockEvent.AddListener(ClockPause);
+        }*/
 
         void Start()
         {
             ClockEvents.ConfigureClockEvent.AddListener(SetTimer);
             ClockEvents.ChangePlayerEvent.AddListener(HandleClockTime);
             ClockEvents.PauseClockEvent.AddListener(ClockPause);
+            
+            FindObjectOfType<ClockController>().SetClockData();
         }
         
 
@@ -100,6 +108,7 @@ using UnityEngine.UI;
         private void UpdateTimerColor()
         {
             float time = (float)clockTime.TotalSeconds / clockMaxSeconds;
+            Debug.Log(time);
             Color currentColor = timerSettings.colors.Evaluate(time);
             timerBackground.color = currentColor;
         }

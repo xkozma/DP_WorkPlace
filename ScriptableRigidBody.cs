@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,28 @@ using UnityEngine;
 public class ScriptableRigidBody : ScriptableObj
 {
     private Rigidbody MyRigidBody;
+
+    public float Mass = 0.0005f;
+    public float Drag = 5f;
+    
     private void Awake()
     {
         MyRigidBody = GetComponent<Rigidbody>();
         MyRigidBody.velocity = Vector3.zero;
         MyRigidBody.angularVelocity = Vector3.zero;
     }
+
+    private void Update()
+    {
+        if (MyRigidBody.mass != Mass)
+        {
+            MyRigidBody.mass = Mass;
+        }else if (MyRigidBody.drag != Drag)
+        {
+            MyRigidBody.drag = Drag;
+        }
+    
+}
 
     public void SetMass(float val)
     {
