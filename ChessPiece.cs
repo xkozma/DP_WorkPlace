@@ -13,6 +13,6 @@ public class ChessPiece : ScriptableObj
     // Update is called once per frame
     void Update()
     {
-        // This comes from new commit
+
     }
 }
