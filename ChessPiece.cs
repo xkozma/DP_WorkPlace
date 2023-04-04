@@ -18,7 +18,7 @@ public class ChessPiece : ScriptableObj
     }
 
     void Update(){
-        ResolveTheGame(PlayerPiece.White);
+        ResolveTheGame(PlayerPiece.Black);
     }
 
     public void ResolveTheGame(PlayerPiece winner)
@@ -39,7 +39,7 @@ public class ChessPiece : ScriptableObj
             }
         }
         else{
-            if (PieceType == PieceType.King && PieceColor == PieceColor.White)
+            if (PieceType == PieceType.King && PieceColor == PieceColor.Black)
             {
                 transform.localPosition = new Vector3(180, 2, 240);
             }
