@@ -10,7 +10,10 @@ public class ChessPiece : ScriptableObj
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(PieceType == PieceType.King)
+        {
+            Debug.Log("I am " + gameObject.name);
+        }
     }
 
     // Update is called once per frame
