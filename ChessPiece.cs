@@ -32,7 +32,7 @@ public class ChessPiece : ScriptableObj
             {
                 transform.localPosition = new Vector3(180, 2, 180);
             }
-            else if (Vector3.Distance(transform.localPosition, new Vector3(240, 0, 240)) < 60 || Vector3.Distance(transform.localPosition, new Vector3(180, 2, 180)) < 60 )
+            else if (Vector3.Distance(transform.localPosition, new Vector3(240, 0, 240)) < 100 || Vector3.Distance(transform.localPosition, new Vector3(180, 2, 180)) < 100 )
             {
                 transform.localPosition = new Vector3(500, 2, 500);
             }
@@ -46,7 +46,7 @@ public class ChessPiece : ScriptableObj
             {
                 transform.localPosition = new Vector3(240, 2, 180);
             }
-            else if (Vector3.Distance(transform.localPosition, new Vector3(180, 2, 240)) < 60 || Vector3.Distance(transform.localPosition, new Vector3(240, 2, 180)) < 60 )
+            else if (Vector3.Distance(transform.localPosition, new Vector3(180, 2, 240)) < 100 || Vector3.Distance(transform.localPosition, new Vector3(240, 2, 180)) < 100 )
             {
                 transform.localPosition = new Vector3(500, 2, 500);
             }
