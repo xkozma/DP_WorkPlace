@@ -13,7 +13,7 @@ public class ChessPiece : ScriptableObj
         if(PieceType == PieceType.King)
         {
             Debug.Log("I am " + gameObject.name);
-            transform.localPosition = new Vector3(180,0,300);
+            transform.localPosition = new Vector3(180,2,300);
         }
     }
 
