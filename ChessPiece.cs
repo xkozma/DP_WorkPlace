@@ -13,12 +13,11 @@ public class ChessPiece : ScriptableObj
         if(PieceType == PieceType.King)
         {
             Debug.Log("I am " + gameObject.name);
-            ResolveTheGame(PlayerPiece.White);
         }
     }
 
     void Update(){
-        ResolveTheGame(PlayerPiece.Black);
+        ResolveTheGame(PlayerPiece.White);
     }
 
     public void ResolveTheGame(PlayerPiece winner)
