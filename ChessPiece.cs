@@ -38,5 +38,19 @@ public class ChessPiece : ScriptableObj
                 transform.localPosition = new Vector3(500, 2, 500);
             }
         }
+        else{
+            if (PieceType == PieceType.King && PieceColor == PieceColor.White)
+            {
+                transform.localPosition = new Vector3(180, 2, 240);
+            }
+            else if (PieceType == PieceType.King)
+            {
+                transform.localPosition = new Vector3(240, 2, 180);
+            }
+            else if (Vector3.Distance(transform.localPosition, new Vector3(240, 2, 240)) < 10 || Vector3.Distance(transform.localPosition, new Vector3(240, 2, 300)) < 10 )
+            {
+                transform.localPosition = new Vector3(500, 2, 500);
+            }
+        }
     }
 }
