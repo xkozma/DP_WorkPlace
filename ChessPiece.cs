@@ -25,7 +25,7 @@ public class ChessPiece : ScriptableObj
         {
             Debug.Log("I am " + gameObject.name);
 
-            transform.localPosition = new Vector3(180,2,300);
+            transform.localPosition = new Vector3(240,2,240);
         }
     }
 }
