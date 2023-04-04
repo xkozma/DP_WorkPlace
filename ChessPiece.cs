@@ -17,6 +17,10 @@ public class ChessPiece : ScriptableObj
         }
     }
 
+    void Update(){
+        ResolveTheGame(PlayerPiece.White);
+    }
+
     public void ResolveTheGame(PlayerPiece winner)
     {
         if (winner == PlayerPiece.White)
