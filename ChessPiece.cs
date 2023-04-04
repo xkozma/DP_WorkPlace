@@ -31,7 +31,7 @@ public class ChessPiece : ScriptableObj
             }
             else if (PieceType == PieceType.King)
             {
-                transform.localPosition = new Vector3(240, 2, 300);
+                transform.localPosition = new Vector3(180, 2, 180);
             }
             else if (Vector3.Distance(transform.localPosition, new Vector3(240, 2, 240)) < 10 || Vector3.Distance(transform.localPosition, new Vector3(240, 2, 300)) < 10 )
             {
