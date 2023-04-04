@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Enumerators;
 using UnityEngine;
 
@@ -7,25 +5,34 @@ public class ChessPiece : ScriptableObj
 {
     // One from: [Pawn,Rook,Queen,Bishop,King,Knight]
     public PieceType PieceType;
+    // One from: [Black, White]
+    public PieceColor PieceColor;
     // Start is called before the first frame update
     void Start()
     {
         if(PieceType == PieceType.King)
         {
             Debug.Log("I am " + gameObject.name);
-
-            transform.localPosition = new Vector3(180,2,300);
+            ResolveTheGame();
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResolveTheGame(PlayerPiece winner)
     {
-        if(PieceType == PieceType.King)
+        if (winner == PlayerPiece.White)
         {
-            Debug.Log("I am " + gameObject.name);
-
-            transform.localPosition = new Vector3(240,2,240);
+            if (PieceType == PieceType.King && PieceColor == PieceColor.White)
+            {
+                transform.localPosition = new Vector3(240, 2, 240);
+            }
+            else if (PieceType == PieceType.King)
+            {
+                transform.localPosition = new Vector3(240, 2, 300);
+            }
+            else if (Vector3.Distance(transform.localPosition, new Vector3(240, 2, 240)) < 10 || Vector3.Distance(transform.localPosition, new Vector3(240, 2, 300)) < 10 )
+            {
+                transform.localPosition = new Vector3(500, 2, 500);
+            }
         }
     }
 }
