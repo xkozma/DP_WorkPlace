@@ -7,7 +7,7 @@ public class ChessBoardAnchors : ScriptableObj
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ChessPiece")
+        if (other.tag == "ChessPieces")
         {
             float x = Mathf.RoundToInt(other.transform.localPosition.x / 60) * 60;
             float z = Mathf.RoundToInt(other.transform.localPosition.z / 60) * 60;
