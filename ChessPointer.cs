@@ -16,10 +16,10 @@ public class ChessPointer : ScriptableObj
         {
             Renderer.enabled = true;
         }
-        else
-        {
+        else{
             Renderer.enabled = false;
-        }
+}
+	// Why is this always showing?
 
         transform.position = HandPosition.position;
         transform.rotation = Quaternion.Euler(0,0,0);
