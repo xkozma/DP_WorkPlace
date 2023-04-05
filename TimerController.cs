@@ -57,8 +57,8 @@ public class TimerController : ScriptableObj
         private void ClockPause()
         {
             isClockRunning = false;
-            // Remove line below to bug color
-            timerBackground.color = Color.gray;
+            // Why isnt the timer gray anymore?
+            timerBackground.color = Color.Gray;
             StopAllCoroutines();
         }
 
@@ -123,6 +123,7 @@ public class TimerController : ScriptableObj
             UpdateTimerText();
             UpdateTimerColor();
 
+	    // This looks important for other parts
             ClockEvents.ClockTimeEndedEvent.Invoke(pieceColor == PlayerPiece.Black ? PlayerPiece.White : PlayerPiece.Black);
         }
     }
