@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using Enumerators;
 using Events;
+using JetBrains.Annotations;
 using Settings;
 using Sounds;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-    public class TimerController : ScriptableObj
+public class TimerController : ScriptableObj
     {
         public Image timerBackground;
         public TimerSettings timerSettings;
@@ -19,14 +20,7 @@ using UnityEngine.UI;
         private bool isClockRunning;
         private TimeSpan clockTime;
         public TextMeshProUGUI timerText;
-
-        /*public TimerController()
-        {
-            ClockEvents.ConfigureClockEvent.AddListener(SetTimer);
-            ClockEvents.ChangePlayerEvent.AddListener(HandleClockTime);
-            ClockEvents.PauseClockEvent.AddListener(ClockPause);
-        }*/
-
+        private ClockEventsBridge clockEventsBridge;
         void Start()
         {
             ClockEvents.ConfigureClockEvent.AddListener(SetTimer);

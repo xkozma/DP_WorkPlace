@@ -20,6 +20,7 @@ public class ClockController : ScriptableObj
         public Button StartButtonUI;
         public Button TapButtonUI;
         public Button ResetButtonUI;
+        private ClockEventsBridge clockEventsBridge;
 
         void Start()
         {

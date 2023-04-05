@@ -20,6 +20,7 @@ public class ChessPointer : ScriptableObj
         {
             Renderer.enabled = false;
         }
+
         transform.position = HandPosition.position;
         transform.rotation = Quaternion.Euler(0,0,0);
     }

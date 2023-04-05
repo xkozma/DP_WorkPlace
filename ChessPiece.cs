@@ -12,12 +12,13 @@ public class ChessPiece : ScriptableObj
     // One from: [Black, White]
     public PieceColor PieceColor;
 
+    private ClockEventsBridge clockEventsBridge;
     // Start is called before the first frame update
     void Start()
     {
         if (PieceType == PieceType.King)
         {
-            //Debug.Log("I am " + gameObject.name);
+            Debug.Log("I am " + gameObject.name);
         }
 
         ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame);
