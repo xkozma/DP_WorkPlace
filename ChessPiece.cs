@@ -17,7 +17,7 @@ public class ChessPiece : ScriptableObj
     {
         if (PieceType == PieceType.King)
         {
-            Debug.Log("I am " + gameObject.name);
+            //Debug.Log("I am " + gameObject.name);
         }
 
         ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame);
