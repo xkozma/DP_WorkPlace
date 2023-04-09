@@ -57,9 +57,8 @@ public class ChessPiece : ScriptableObj
                 transform.localPosition = new Vector3(step * 4, 2, step * 3);
             }
             else if (Vector3.Distance(transform.localPosition, new Vector3(step * 3, 2, step * 4)) < 100 ||
-                     Vector3.Distance(transform.localPosition, new Vector3(step * 4, 2, step * 3)) < 100)
-           {
-               transform.localPosition = newVector3(500, 2, 500);
+                     Vector3.Distance(transform.localPosition, new Vector3(step * 4, 2, step *3)) < 100)           {
+               transform.localPosition = new Vector3(500,2, 500);
             }
         }
     }
