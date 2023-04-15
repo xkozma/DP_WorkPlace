@@ -24,7 +24,7 @@ public class ClockController : ScriptableObj
 
         void Start()
         {
-            StartButtonUI.onClick.AddListener(StartClock);
+           Debug.Log("Change"); StartButtonUI.onClick.AddListener(StartClock);
             TapButtonUI.onClick.AddListener(ChangePlayerOnClock);
             ResetButtonUI.onClick.AddListener(ResetClock);
             SetClockData();
