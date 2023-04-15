@@ -13,7 +13,7 @@ public class ClockController : ScriptableObj
 
         public int ClockTime;
         public int ClockExtraTime;
-        public float test;
+        public int test;
 
         public GameObject StartButton;
         public GameObject TapButton;
