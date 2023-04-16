@@ -22,6 +22,7 @@ public class ChessPiece : ScriptableObj
         }
 	// We need to define the end of the game here - probably by listening to some kind of event
 	// Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
+                ClockEvents.ClockTimeEndedEvent().AddListener(ResolveTheGame);
 	
 	step = FindObjectOfType<ChessBoardAnchors>().step;
     }
@@ -59,7 +60,7 @@ public class ChessPiece : ScriptableObj
                      Vector3.Distance(transform.localPosition, new Vector3(step * 4, 2, step * 3)) < 100)
             {
                 transform.localPosition = new Vector3(500, 2, 500);
-            }
+           }
         }
     }
 }
