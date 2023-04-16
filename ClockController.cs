@@ -13,7 +13,6 @@ public class ClockController : ScriptableObj
 
         public int ClockTime;
         public int ClockExtraTime;
-        // secret msg
 
         public GameObject StartButton;
         public GameObject TapButton;
