@@ -22,6 +22,7 @@ public class ClockController : ScriptableObj
         public Button ResetButtonUI;
         private ClockEventsBridge clockEventsBridge;
 
+
         void Start()
         {
             StartButtonUI.onClick.AddListener(StartClock);
