@@ -21,11 +21,11 @@ other.transform.localPosition = new Vector3(x,0,z);
         }
     }
 
-    private void OnTriggerExit(Collider other)
+ /*   private void OnTriggerExit(Collider other)
     {
         if (other.tag == "ChessPiece")
         {
             Debug.Log("Exited " + other.name);
         }
-    }
+    }*/
 }
