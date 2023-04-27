@@ -31,7 +31,11 @@ public class ClockController : ScriptableObj
         }
         
         public ClockController()
-        {
+        { //hhh
+
+
+
+
             ClockEvents.ClockTimeEndedEvent.AddListener(arg =>
             {
                 if(currentPlayerOnClock == PlayerPiece.White)
