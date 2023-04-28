@@ -5,7 +5,6 @@ using UnityEngine;
 public class ChessPiece : ScriptableObj
 {
     private int step;
-    privi
     // One from: [Pawn,Rook,Queen,Bishop,King,Knight]
     public PieceType PieceType;
 
@@ -34,7 +33,7 @@ public class ChessPiece : ScriptableObj
         {
             if (PieceType == PieceType.King && PieceColor == PieceColor.White)
             {
-                transform.localPosition = new Vector3(step * 4, 2, step * 4);
+                transform.localPosition = new Vector3(step * 4, 2, step * 5);
             }
             else if (PieceType == PieceType.King)
             {
