@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChessPiece : ScriptableObj
 {
     private int step;
-    priv
+    privi
     // One from: [Pawn,Rook,Queen,Bishop,King,Knight]
     public PieceType PieceType;
 
