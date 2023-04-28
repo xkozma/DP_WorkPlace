@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ChessBoardAnchors : ScriptableObj
 {
-    public int step = 80;
+    public int step = 1000;
 
     private void OnTriggerEnter(Collider other)
     {
