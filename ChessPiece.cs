@@ -33,7 +33,7 @@ public class ChessPiece : ScriptableObj
         {
             if (PieceType == PieceType.King && PieceColor == PieceColor.White)
             {
-                transform.localPosition = new Vector3(step * 4, 2, step * 5);
+                transform.localPosition = new Vector3(step * 4, 2, step * 4);
             }
             else if (PieceType == PieceType.King)
             {
