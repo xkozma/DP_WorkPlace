@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChessBoardAnchors : ScriptableObj
-{
+
     public int step = 60;
 
     private void OnTriggerEnter(Collider other)
