@@ -27,7 +27,6 @@ public class ClockController : ScriptableObj
 
         void Start()
         {
-
             isMultiplayer = GetComponent<ScriptableObjDefaults>().isMultiplayer;
             StartButtonUI.onClick.AddListener(StartClockCheck);
             TapButtonUI.onClick.AddListener(ChangePlayerOnClockCheck);
