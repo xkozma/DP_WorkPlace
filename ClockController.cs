@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class ClockController : ScriptableObj
     {
-
         private ClockState currentClockState;
         private PlayerPiece currentPlayerOnClock;
 
