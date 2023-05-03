@@ -10,7 +10,7 @@ public class ChessPiece : ScriptableObj
     public PieceType PieceType;
 
     // One from: [Black, White]
-    public PieceColor PieceColor
+    public PieceColor PieceColor;
 
     private ClockEventsBridge clockEventsBridge;
     // Start is called before the first frame update
