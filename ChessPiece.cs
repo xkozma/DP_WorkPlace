@@ -22,7 +22,7 @@ public class ChessPiece : ScriptableObj
         }
 	// We need to define the end of the game here - probably by listening to some kind of event
 	// Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
-                ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame);
+                ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame)
 
 	step = FindObjectOfType<ChessBoardAnchors>().step;
     }
