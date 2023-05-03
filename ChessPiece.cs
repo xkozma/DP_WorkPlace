@@ -2,6 +2,8 @@ using Enumerators;
 using Events;
 using UnityEngine;
 
+public class Chessk{}
+
 public class ChessPiece : ScriptableObj
 {
     private int step;
