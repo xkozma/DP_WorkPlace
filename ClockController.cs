@@ -68,7 +68,7 @@ public class ClockController : ScriptableObj
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
 
             // Missing button switches?
-            
+        TapButton.SetActive(false);
         StartButton.SetActive(true);
         }
         
@@ -79,6 +79,7 @@ public class ClockController : ScriptableObj
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
             // Missing button switches again?
         TapButton.SetActive(true);
+        StartButton.SetActive(false);
         }
 
         public void SetClockData()
