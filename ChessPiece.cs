@@ -65,6 +65,8 @@ public class ChessPiece : ScriptableObj
     }
 }
 
-public class SomethingElse(){}
+public class SomethingElse(){
+
+}
 
 
