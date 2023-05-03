@@ -10,15 +10,21 @@ public class ClockController : ScriptableObj
     {
         private ClockState currentClockState;
         private PlayerPiece currentPlayerOnClock;
+
         public int ClockTime;
         public int ClockExtraTime;
+
         public GameObject StartButton;
         public GameObject TapButton;
+
         public Button StartButtonUI;
         public Button TapButtonUI;
+
         public Button ResetButtonUI;
         private ClockEventsBridge clockEventsBridge;
+
         public bool isMultiplayer = false;
+
         void Start()
         {
             isMultiplayer = GetComponent<ScriptableObjDefaults>().isMultiplayer;
