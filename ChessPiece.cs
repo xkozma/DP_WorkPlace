@@ -64,3 +64,5 @@ public class ChessPiece : ScriptableObj
         }
     }
 }
+
+public class SomethingElse(){}
