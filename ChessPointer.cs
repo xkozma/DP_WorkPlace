@@ -17,7 +17,7 @@ public class ChessPointer : ScriptableObj
             Renderer.enabled = true;
         }else{
             Renderer.enabled = false;
-}
+            }
 	// Why is this always showing?
 
         if(HandPosition!=null)
