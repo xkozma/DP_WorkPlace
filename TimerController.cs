@@ -18,7 +18,7 @@ public class TimerController : ScriptableObj
         private int extraSeconds;
         private int clockMaxSeconds;
         private bool isClockRunning;
-        private TimeSpan clockTime;
+        public TimeSpan clockTime;
         public TextMeshProUGUI timerText;
         private ClockEventsBridge clockEventsBridge;
         void Start()
@@ -58,7 +58,7 @@ public class TimerController : ScriptableObj
         {
             isClockRunning = false;
             // Why isnt the timer gray anymore?
-            timerBackground.color = Color.gray;
+
             StopAllCoroutines();
         }
 
