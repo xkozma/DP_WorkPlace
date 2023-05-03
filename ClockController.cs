@@ -6,38 +6,32 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class ClockController : ScriptableObj
     {
         private ClockState currentClockState;
         private PlayerPiece currentPlayerOnClock;
-
         public int ClockTime;
         public int ClockExtraTime;
-
         public GameObject StartButton;
         public GameObject TapButton;
-
         public Button StartButtonUI;
         public Button TapButtonUI;
         public Button ResetButtonUI;
         private ClockEventsBridge clockEventsBridge;
-
         public bool isMultiplayer = false;
-
         void Start()
         {
             isMultiplayer = GetComponent<ScriptableObjDefaults>().isMultiplayer;
             StartButtonUI.onClick.AddListener(StartClockCheck);
             TapButtonUI.onClick.AddListener(ChangePlayerOnClockCheck);
             ResetButtonUI.onClick.AddListener(ResetClockCheck);
-            
+           
             ClockNetworkEvents.NetworkClockReset.AddListener(ResetClock);
             ClockNetworkEvents.NetworkClockTap.AddListener(ChangePlayerOnClock);
             ClockNetworkEvents.NetworkClockStart.AddListener(StartClock);
             SetClockData();
         }
-        
+       
         public ClockController()
         {
             ClockEvents.ClockTimeEndedEvent.AddListener(arg =>
@@ -53,42 +47,37 @@ public class ClockController : ScriptableObj
             currentPlayerOnClock = currentPlayerOnClock == PlayerPiece.White
                 ? PlayerPiece.Black
                 : PlayerPiece.White;
-
             ClockEvents.ChangePlayerEvent.Invoke(currentPlayerOnClock);
         }
-
         public void ResetClock()
         {
             currentClockState = ClockState.Pause;
             currentPlayerOnClock = PlayerPiece.White;
-
             SetClockData();
             ClockEvents.PauseClockEvent.Invoke();
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
-
             // Missing button switches?
-        StartButtonUI.SetActive(true);
-        TapButtonUI.SetActive(false);
+        StartButton.SetActive(true);
+        TapButton.SetActive(false);
         }
-        
+       
         public void StartClock()
         {
             SetClockData();
             ClockEvents.ChangePlayerEvent.Invoke(currentPlayerOnClock);
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
             // Missing button switches again?
-        StartButtonUI.SetActive(false);
-        TapButtonUI.SetActive(true);
+        StartButton.SetActive(false);
+        TapButton.SetActive(true);
         }
-
         public void SetClockData()
         {
             int clockTime = ClockTime;
             int extraSeconds = ClockExtraTime;
-            
+           
             ClockEvents.ConfigureClockEvent.Invoke(new ConfigureClockEventData(clockTime, extraSeconds));
         }
-        
+       
         public void StartClockCheck()
         {
             if (isMultiplayer)
@@ -100,7 +89,6 @@ public class ClockController : ScriptableObj
                 StartClock();
             }
         }
-
         public void ChangePlayerOnClockCheck()
         {
             if (isMultiplayer)
@@ -123,5 +111,5 @@ public class ClockController : ScriptableObj
                 ResetClock();
             }
         }
-        
+       
     }
