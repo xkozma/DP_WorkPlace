@@ -12,7 +12,6 @@ public class ChessPiece : ScriptableObj
     // One from: [Black, White]
     public PieceColor PieceColor;
 
-
     private ClockEventsBridge clockEventsBridge;
     // Start is called before the first frame update
     void Start()
@@ -23,9 +22,8 @@ public class ChessPiece : ScriptableObj
         }
 	// We need to define the end of the game here - probably by listening to some kind of event
 	// Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
+                ConfigureClockEvent.AddListener(ResolveTheGame)
 
-ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame);
-	
 	step = FindObjectOfType<ChessBoardAnchors>().step;
     }
 
