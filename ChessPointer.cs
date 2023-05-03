@@ -12,16 +12,16 @@ public class ChessPointer : ScriptableObj
     }
     void Update()
     {
-        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
+        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.SecondaryHandTrigger, Controller.LTouch))
         {
             Renderer.enabled = true;
-        }
-        else{
+        }else{
             Renderer.enabled = false;
 }
 	// Why is this always showing?
 
-        transform.position = HandPosition.position;
+        if(HandPosition!=null)
+            transform.position = HandPosition.position;
         transform.rotation = Quaternion.Euler(0,0,0);
     }
 }
