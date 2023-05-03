@@ -20,7 +20,7 @@ public class TimerController : ScriptableObj
         private bool isClockRunning;
         public TimeSpan clockTime;
         public TextMeshProUGUI timerText;
-        private ClockEventsBridge clockEventsBridge
+        private ClockEventsBridge clockEventsBridge;
         void Start()
         {
             ClockEvents.ConfigureClockEvent.AddListener(SetTimer);
