@@ -16,6 +16,7 @@ public class ChessPointer : ScriptableObj
         {
             Renderer.enabled = true;
         }
+else
 	// Why is this always showing?
                  Renderer.enabled = false;
 
