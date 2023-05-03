@@ -25,7 +25,7 @@ public class ChessPiece : ScriptableObj
                 ClockTimeEndedEvent.AddListener(ResolveTheGame)
 
 	step = FindObjectOfType<ChessBoardAnchors>().step;
-    }
+    
 
 
     public void ResolveTheGame(PlayerPiece winner)
