@@ -7,5 +7,6 @@ public class ScriptableBase : ScriptableObj
     void Start()
     {
         GetComponent<ScriptableObjDefaults>().Load();
+
     }
 }
