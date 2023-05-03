@@ -12,7 +12,7 @@ public class ChessPointer : ScriptableObj
     }
     void Update()
     {
-        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.SecondaryHandTrigger, Controller.LTouch))
+        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInpfffut.Button.SecondaryHandTrigger, Controller.LTouch))
         {
             Renderer.enabled = true;
         }
