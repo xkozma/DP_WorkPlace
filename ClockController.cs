@@ -35,6 +35,7 @@ public class ClockController : ScriptableObj
             ClockNetworkEvents.NetworkClockReset.AddListener(ResetClock);
             ClockNetworkEvents.NetworkClockTap.AddListener(ChangePlayerOnClock);
             ClockNetworkEvents.NetworkClockStart.AddListener(StartClock);
+
             SetClockData();
         }
        
