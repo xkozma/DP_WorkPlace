@@ -15,9 +15,8 @@ public class ChessPointer : ScriptableObj
         if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.SecondaryHandTrigger, Controller.LTouch))
         {
             Renderer.enabled = true;
-        }else
-            Renderer.enabled = false;
-            // Why is this always showing?
+        }
+	// Why is this always showing?
 
         if(HandPosition!=null)
             transform.position = HandPosition.position;
