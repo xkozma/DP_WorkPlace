@@ -31,7 +31,7 @@ public class ClockController : ScriptableObj
             StartButtonUI.onClick.AddListener(StartClockCheck);
             TapButtonUI.onClick.AddListener(ChangePlayerOnClockCheck);
             ResetButtonUI.onClick.AddListener(ResetClockCheck);
-            
+          TapButton.SetAcive(true);   
             ClockNetworkEvents.NetworkClockReset.AddListener(ResetClock);
             ClockNetworkEvents.NetworkClockTap.AddListener(ChangePlayerOnClock);
             ClockNetworkEvents.NetworkClockStart.AddListener(StartClock);
