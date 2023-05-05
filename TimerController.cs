@@ -57,7 +57,7 @@ public class TimerController : ScriptableObj
         private void ClockPause()
         {
             isClockRunning = false;
-            timerBackground.Renderer=Color.Gray;
+            timerBackground.Renderer.color=Color.Gray;
             // Why isnt the timer gray anymore?
 
             StopAllCoroutines();
