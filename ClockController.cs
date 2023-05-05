@@ -31,7 +31,7 @@ public class ClockController : ScriptableObj
             StartButtonUI.onClick.AddListener(StartClockCheck);
             TapButtonUI.onClick.AddListener(ChangePlayerOnClockCheck);
             ResetButtonUI.onClick.AddListener(ResetClockCheck);
-          TapButton.SetAcive(true);   
+            
             ClockNetworkEvents.NetworkClockReset.AddListener(ResetClock);
             ClockNetworkEvents.NetworkClockTap.AddListener(ChangePlayerOnClock);
             ClockNetworkEvents.NetworkClockStart.AddListener(StartClock);
@@ -65,7 +65,7 @@ public class ClockController : ScriptableObj
             SetClockData();
             ClockEvents.PauseClockEvent.Invoke();
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
-            TapButton.SetAcive(true);
+           TapButton.SetAcive(true);
             // Missing button switches?
         }
         
@@ -74,7 +74,6 @@ public class ClockController : ScriptableObj
             SetClockData();
             ClockEvents.ChangePlayerEvent.Invoke(currentPlayerOnClock);
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
-         TapButton.SetAcive(true);
             // Missing button switches again?
         }
 
@@ -88,6 +87,7 @@ public class ClockController : ScriptableObj
         
         public void StartClockCheck()
         {
+
             if (isMultiplayer)
             {
                 GetComponent<ScriptableNetworkBridge>().StartOverNetworkServerRpc();
