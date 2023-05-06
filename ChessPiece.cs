@@ -16,14 +16,10 @@ public class ChessPiece : ScriptableObj
     // Start is called before the first frame update
     void Start()
     {
-        if (PieceType == PieceType.King)
-        {
-            Debug.Log("I am " + gameObject.name);
-        }
-	// We need to define the end of the game here - probably by listening to some kind of event
-	// Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
-	
-	step = FindObjectOfType<ChessBoardAnchors>().step;
+        // We need to define the end of the game here - probably by listening to some kind of event
+	    // Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
+	ClockEvents.ClockTimeEndedEvent.AddListener(ResolveTheGame);
+	    step = FindObjectOfType<ChessBoardAnchors>().step;
     }
 
 
