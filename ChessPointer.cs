@@ -12,12 +12,11 @@ public class ChessPointer : ScriptableObj
     }
     void Update()
     {
-        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.SecondaryHandTrigger, Controller.LTouch))
+        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
-            Renderer.enabled = true;
-        }else
-            Renderer.enabled = false;
-	// Why is this always showing?
+            // This is when we touch any of Grab Buttons
+        }
+
 
         if(HandPosition!=null)
             transform.position = HandPosition.position;
