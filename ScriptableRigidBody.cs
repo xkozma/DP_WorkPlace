@@ -29,7 +29,7 @@ public class ScriptableRigidBody : ScriptableObj
     if (MyRigidBody.drag != Drag)
         {
             MyRigidBody.drag = Drag;
-        
+        }
 }
 
     public void SetMass(float val)
