@@ -26,17 +26,21 @@ public class ScriptableRigidBody : ScriptableObj
         }
         // We need to set MyRigidBody drag as well as we did it with Mass
         // Pascal case, Camel case convetions are the same
-
-        if (MyRigidBody.drag != Drag)
+    if (MyRigidBody.drag != Drag)
         {
             MyRigidBody.drag = Drag;
-        }
-    
+        
 }
 
     public void SetMass(float val)
     {
         MyRigidBody.mass = val;
+    }
+
+    
+    public void SetDrag(float val)
+    {
+        MyRigidBody.drag = val;
     }
 
     public void SetForce(float x, float y, float z)
