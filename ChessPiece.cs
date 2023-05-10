@@ -20,6 +20,7 @@ public class ChessPiece : ScriptableObj
 	    // Check the ClockEvents for suitable one - You can use ClockEvents.xyz directly
 
 	    step = FindObjectOfType<ChessBoardAnchors>().step;
+                ClockEvents.PauseClockEvent.AddListener(ResolveTheGame);
     }
 
 
