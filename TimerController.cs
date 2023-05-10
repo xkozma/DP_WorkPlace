@@ -58,7 +58,7 @@ public class TimerController : ScriptableObj
         {
             isClockRunning = false;
             // Why isnt the timer gray anymore?
-            DisableClock();
+            timerBackground.color = Color.gray;
             StopAllCoroutines();
         }
 
