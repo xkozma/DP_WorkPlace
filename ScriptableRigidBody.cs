@@ -9,7 +9,7 @@ public class ScriptableRigidBody : ScriptableObj
     private Rigidbody MyRigidBody;
 
     public float Mass = 0.0005f;
-    public float Drag = 0.5f;
+    public float Drag = 5f;
     
     private void Awake()
     {
