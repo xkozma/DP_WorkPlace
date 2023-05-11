@@ -16,9 +16,11 @@ public class ChessPointer : ScriptableObj
         {
             Renderer.enabled=true;
         }
+        else{
+            Renderer.enable=false;
+        }
 
         if(HandPosition!=null){
-            Renderer.enabled=false;
             transform.position = HandPosition.position;
         }
         transform.rotation = Quaternion.Euler(0,0,0);
