@@ -14,15 +14,13 @@ public class ChessPointer : ScriptableObj
     {
         if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
-            Renderer.enabled=true;
-        }
-        else{
-            Renderer.enabled=false;
-        }
+            Renderer.enabled = true;
+        }else
+            Renderer.enabled = false;
+	// Why is this always showing?
 
-        if(HandPosition!=null){
+        if(HandPosition!=null)
             transform.position = HandPosition.position;
-        }
         transform.rotation = Quaternion.Euler(0,0,0);
     }
 }
