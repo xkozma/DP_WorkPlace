@@ -12,10 +12,14 @@ public class ChessPointer : ScriptableObj
     }
     void Update()
     {
-        if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
+        if (!Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) && !Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
             // This is when we touch any of Grab Buttons
-        }
+Renderer.enabled=false;
+}
+        else{
+Renderer.enabled=true;
+}
 
 
         if(HandPosition!=null)
