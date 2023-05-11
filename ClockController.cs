@@ -65,8 +65,8 @@ public class ClockController : ScriptableObj
             SetClockData();
             ClockEvents.PauseClockEvent.Invoke();
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
-            TapButton.SetActive(true);
-            StartButton.SetActive(false);
+            TapButton.SetActive(false);
+            StartButton.SetActive(true);
         }
         
         public void StartClock()
@@ -74,8 +74,8 @@ public class ClockController : ScriptableObj
             SetClockData();
             ClockEvents.ChangePlayerEvent.Invoke(currentPlayerOnClock);
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
-            TapButton.SetActive(false);
-            StartButton.SetActive(true);
+            TapButton.SetActive(true);
+            StartButton.SetActive(false);
         }
 
         public void SetClockData()
