@@ -14,10 +14,8 @@ public class ChessPointer : ScriptableObj
     {
         if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
-            Renderer.enabled=false;
-        }
-
             Renderer.enabled=true;
+        }
 
         if(HandPosition!=null)
             transform.position = HandPosition.position;
