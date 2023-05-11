@@ -17,7 +17,7 @@ public class ChessPointer : ScriptableObj
             Renderer.enabled=true;
         }
         else{
-            Renderer.enable=false;
+            Renderer.enabled=false;
         }
 
         if(HandPosition!=null){
