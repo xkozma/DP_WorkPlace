@@ -14,7 +14,7 @@ public class ChessPointer : ScriptableObj
     {
         if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
-            Renderer.enabld=false;
+            Renderer.enabled=false;
         }
 
 
