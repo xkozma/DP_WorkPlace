@@ -15,7 +15,11 @@ public class ChessPointer : ScriptableObj
         if (Get(OVRInput.Button.PrimaryHandTrigger, Controller.RTouch) || Get(OVRInput.Button.PrimaryHandTrigger, Controller.LTouch))
         {
             // This is when we touch any of Grab Buttons
+             Renderer.enabled = true;
+            
         }
+        else
+            Renderer.enabled = false;
 
 
         if(HandPosition!=null)
