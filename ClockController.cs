@@ -67,7 +67,7 @@ public class ClockController : ScriptableObj
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
 
             // Missing button switches?
-        
+        }
         
         public void StartClock()
         {
