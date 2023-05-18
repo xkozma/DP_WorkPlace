@@ -66,7 +66,7 @@ public class ClockController : ScriptableObj
             ClockEvents.PauseClockEvent.Invoke();
             ClockEvents.ChangeClockStateEvent.Invoke(currentClockState);
             StartButton.SetActive(true);
-            TapButton.SetActive(false;
+            TapButton.SetActive(false);
             // Missing button switches?
         }
         
