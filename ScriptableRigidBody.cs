@@ -24,8 +24,8 @@ public class ScriptableRigidBody : ScriptableObj
         {
             MyRigidBody.mass = Mass;
         }
-        // We need to set MyRigidBody drag as well as we did it with Mass
-        // Pascal case, Camel case convetions are the same 
+        // We need to set MyRigidBody drag as well as we did it with Mass.
+        // Pascal case, Camel case convetions are the same.
     
 }
 
