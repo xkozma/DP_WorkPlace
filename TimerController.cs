@@ -57,8 +57,8 @@ public class TimerController : ScriptableObj
         private void ClockPause()
         {
             isClockRunning = false;
+            // Why isnt the timer gray anymore?
             timerBackground.color = Color.gray;
-
             StopAllCoroutines();
         }
 
@@ -70,7 +70,6 @@ public class TimerController : ScriptableObj
         private void DisableClock()
         {
             timerBackground.color = Color.gray;
-
         }
 
         private void AddExtraTime()

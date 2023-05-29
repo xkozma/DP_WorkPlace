@@ -69,6 +69,7 @@ public class ClockController : ScriptableObj
             // Missing button switches?
         StartButton.SetActive(true);
         TapButton.SetActive(false);
+
         }
         
         public void StartClock()
